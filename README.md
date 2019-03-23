@@ -21,7 +21,7 @@ docker logs mysql57 2>&1 | grep GENERATED
 docker exec -it mysql57 mysql -uroot -p
 ```
 
-###If this is the fresh installation you will be asked to change the password using ALTER USER command. Do it.
+### If this is the fresh installation you will be asked to change the password using ALTER USER command. Do it.
 ```
 mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'root';
 ```   
@@ -79,13 +79,13 @@ mysql -uroot -ppassword < employees-standard.sql
 
 # ZADANIA SCHEMAT EMPLOYEES
 
-##ZADANIE 1
+## ZADANIE 1
 * Wyświetl dzisiejszą datę 
 * Wyświetl aktualny rok:
 * Wyświetl aktualny miesiąc:
 * Wyświetl aktualny dzień:
 
-##ZADANIE 2
+## ZADANIE 2
 * Wyszukaj wszystkich pracowników?
 * Wyszukaj wśród pracowników wszystkich mężczyczn.
 * I ogranicz wyniki do 10
@@ -95,41 +95,41 @@ mysql -uroot -ppassword < employees-standard.sql
 * Policz wszystkich pracujących mężczyzn i kobiety.
 * Policz wszystkich pracujących mężczyzn i kobiety urodzonych po 1960.
 
-##ZADANIE 3
+## ZADANIE 3
 * Znajdź największe wynagrodzenie.
 * Znajdź najmniejsze wynagrodzenie.
 * Wyświetl imię i nazwisko pracownika w kolumnie zapisanej jako ‘rekin biznesu’ mężczyzn urodzonych po 1954 roku
 
-##ZADANIE 4
+## ZADANIE 4
 * Policz rekinów biznesu i zapisz ich w danej kolumnie
 
-##ZADANIE 5
+## ZADANIE 5
 * Policz ile osób pracuje na danym stanowisku
 
-##ZADANIE 6
+## ZADANIE 6
 * Policz ile osób pracuje na jakim stanowisku.
 * Policz ile w firmie pracuje kobiet i ile mężczyzn?
 * Policz ile kobiet i ile mężczyzn pracuje na danym stanowisku.
 
-##ZADANIE 7 
+## ZADANIE 7 
 * Wyświetl zarobki, imie i nazwisko pracownika wraz płcią, którzy zarabiają powyżej 150000 w konstrukcjach z JOIN i podzapytaniem z ANY (uwaga na ALL)
 
-##ZADANIE 8 
+## ZADANIE 8 
 * Wyświetl zarobki, imię i nazwisko pracownika wraz płcią, którzy zarabiają pomiędzy 145000 a 150000
 
-##ZADANIE 9
+## ZADANIE 9
 * Wyświetlić mężczyznę i kobietę, którzy zarabiają najwięcej
 
-##ZADANIE 10 
+## ZADANIE 10 
 * Wyświetlić płeć, liczbę pracowników, średnie wynagrodzenie, sumę wynagrodzenia i maksymalne wynagrodzenie dla danej płci.
 
-##Zadanie 11. 
+## Zadanie 11. 
 * Dodać 250 pracowników do tabeli pracowników
 
-##Zadanie 12.
+## Zadanie 12.
 * Policz ile jest oddziałów
 
-##Zadanie 13.
+## Zadanie 13.
 * Wyświetl wszystkie zarobki audytowe pracowników, czyli takie, które już się zakończyły
 * Utworz tabele audytowa i przenies tam dane z tabeli zarobkow.
 
@@ -138,82 +138,82 @@ mysql -uroot -ppassword < employees-standard.sql
 ** insert do tabeli audytowej
 ** delete z tabeli zarobkow
 
-##Zadanie 14.
+## Zadanie 14.
 * Dokonać operacji zmiany płci
 
-##Zadanie 15.
+## Zadanie 15.
 * Dokonać odwrotnej operacji zmiany płci w celu przywrócenia danych pierwotnych
 
-##Zadanie 16. 
+## Zadanie 16. 
 * Wykorzystaj instrukcję DATEDIFF i TIMEDIFF
 
-##Zadanie 17. 
+## Zadanie 17. 
 * Wyświetl pogrupowane po zawodzie średnie zarobki pracowników na danych stanowiskach większe niż 5000.
 <podpowiedź -> having>
 * Na których stanowiskach pracuje więcej niż 100000 osób?
 
-##Zadnaie 18.
+## Zadnaie 18.
 * Znajdź wszystkich managerów działu Development.
 
-##Zadanie 19. 
+## Zadanie 19. 
 * Który dział zatrudnia obecnie najwięcej osób?
 
-##Zadanie 20. 
+## Zadanie 20. 
 * Stwórz raport zarobków obecnych managerów od najmniej
 zarabiających do najlepiej zarabiających podając działy w
 których pracują.
 (Nazwa działu, Imię, Nazwisko, Wynagrodzenie)
 
-##Zadanie 21.
+## Zadanie 21.
 Który dział miał najwięcej managerów?
 
-##Zadanie 22.
+## Zadanie 22.
 Znajdź najlepiej zarabiającą, obecnie zatrudnioną kobietę.
 
 #PROCEDURY/FUNKCJE
 
-##Zadanie 1.
+## Zadanie 1.
 
 Napisz procedurę dodawania pracowników
 
-##Zadanie 2.
+## Zadanie 2.
 Napisz procedurę dającą awans
 
-##Zadanie 3.
+## Zadanie 3.
 Napisz procedurę usuwającą pracownika z firmy
 
-##Zadanie 4.
+## Zadanie 4.
 Napisz funkcję obliczającą średnią pensję dla danego stanowiska
 
 #TRIGERY
 
-##Zadanie 1.
+## Zadanie 1.
 Dodaj tabelę audytową pracowników
 
-##Zadanie 2. 
+## Zadanie 2. 
 Napisz trigger, który po usunięciu pracownika wstawi jego dane do tabeli audytowej.
 
 #WIDOKI
 
-##Zadanie 1. 
+## Zadanie 1. 
 Zapisz w formie widoków i wyświetl dowolne zapytanie wykonane podczas zajęć.
 
 # ZADANIA WŁASNY SCHEMAT
 
-##Zadanie 0
+## Zadanie 0
 Zaprojektuj własny schemat
 
-##Zadanie 1 (łatwe).
+## Zadanie 1 (łatwe).
 Zaimplementuj własny schemat w mysqlu (może być przez diagram ERD i forward engineering)
 
-##Zadanie 2 (średnie).
+## Zadanie 2 (średnie).
 Zamodeluj relacje przy użyciu instrukcji SQL
 
-##Zadanie 3 (trudne).
+## Zadanie 3 (trudne).
 Zastanów się w jaki sposób uzupełnić tabele przykładowymi danymi, jeżeli napotkasz trudności związane 
 ze zbyt dużą liczbą constraintów na tabelach spróbuj uzupełnić je ręcznie niewielką ilością danych
 
-##Zadanie 4 (trudne).
+## Zadanie 4 (trudne).
 Twój schemat powinien zawierać co najmniej 
 * 3 różne relacje, 
 * 2 procedury składowane, 
@@ -221,24 +221,24 @@ Twój schemat powinien zawierać co najmniej
 * 2 triggery
 * 3 różne widoki.
 
-#Zadania dodatkowe
+# Zadania dodatkowe
 https://sqlzoo.net/
 
-#Dodatkowe linki:
+# Dodatkowe linki:
 
-##do testowania mysqla bez instalacji:
+## do testowania mysqla bez instalacji:
 http://sqlfiddle.com/#!9/a6c585/1
 
-##SQL INJECTION
+## SQL INJECTION
 https://www.w3schools.com/sql/sql_injection.asp
 
-##EBOOKI
+## EBOOKI
 https://ebookpoint.pl/ksiazki/jezyk-sql-przyjazny-podrecznik-wydanie-ii-larry-rockoff,jsqlp2.htm
 
-##IDE
+## IDE
 https://blog.jetbrains.com/datagrip/2019/03/11/top-9-sql-features-of-datagrip-you-have-to-know/?utm_source=facebook&utm_medium=cpc&utm_campaign=ww_en_ww_datagrip_fb_na_cont&fbclid=IwAR0xIZu-zmkeZC7_qZV4sPiFvjxgUT61hM7vi_yZrTmHvRG83F2fwd2YK9A
 
-#PODSUMOWANIE:
+# PODSUMOWANIE:
  
 1. ACID
 2. FUNKCJE AGREGUJĄCE
