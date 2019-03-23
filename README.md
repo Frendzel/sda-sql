@@ -72,7 +72,7 @@ docker exec -i mysql57 mysql -uroot -ppassword < load_salaries3.dump
 
 Jeżeli zdecydowałeś się na instalację mysqla za pomocą standardowego instalatora wystarczy uruchomić plik:
 ```
-mysql57 mysql -uroot -ppassword < employees-standard.sql
+mysql -uroot -ppassword < employees-standard.sql
 ```
 
 # SQL
@@ -80,19 +80,25 @@ mysql57 mysql -uroot -ppassword < employees-standard.sql
 # ZADANIA SCHEMAT EMPLOYEES
 
 ##ZADANIE 1
-
 * Wyświetl dzisiejszą datę 
 * Wyświetl aktualny rok:
 * Wyświetl aktualny miesiąc:
 * Wyświetl aktualny dzień:
 
 ##ZADANIE 2
-
+* Wyszukaj wszystkich pracowników?
+* Wyszukaj wśród pracowników wszystkich mężczyczn.
+* I ogranicz wyniki do 10
+* Znajdź 30 najstarszych pracowników
+* Ile było i jest w firmie zatrudnionych pracowników?
+* Ilu inżynierów ('engineer') pracuje obecnie w firmie (tabela titles)?
 * Policz wszystkich pracujących mężczyzn i kobiety.
 * Policz wszystkich pracujących mężczyzn i kobiety urodzonych po 1960.
 
 ##ZADANIE 3
-* Wyświetl imię i nazwisko pracownika w kolumnie zapisanej jako ‘rekin biznesu’ mężczyzn urodzonych po 1964 roku
+* Znajdź największe wynagrodzenie.
+* Znajdź najmniejsze wynagrodzenie.
+* Wyświetl imię i nazwisko pracownika w kolumnie zapisanej jako ‘rekin biznesu’ mężczyzn urodzonych po 1954 roku
 
 ##ZADANIE 4
 * Policz rekinów biznesu i zapisz ich w danej kolumnie
@@ -101,7 +107,9 @@ mysql57 mysql -uroot -ppassword < employees-standard.sql
 * Policz ile osób pracuje na danym stanowisku
 
 ##ZADANIE 6
-* Policz ile kobiet i ile mężczyzn pracuje na danym stanowisku
+* Policz ile osób pracuje na jakim stanowisku.
+* Policz ile w firmie pracuje kobiet i ile mężczyzn?
+* Policz ile kobiet i ile mężczyzn pracuje na danym stanowisku.
 
 ##ZADANIE 7 
 * Wyświetl zarobki, imie i nazwisko pracownika wraz płcią, którzy zarabiają powyżej 150000 w konstrukcjach z JOIN i podzapytaniem z ANY (uwaga na ALL)
@@ -142,6 +150,25 @@ mysql57 mysql -uroot -ppassword < employees-standard.sql
 ##Zadanie 17. 
 * Wyświetl pogrupowane po zawodzie średnie zarobki pracowników na danych stanowiskach większe niż 5000.
 <podpowiedź -> having>
+* Na których stanowiskach pracuje więcej niż 100000 osób?
+
+##Zadnaie 18.
+* Znajdź wszystkich managerów działu Development.
+
+##Zadanie 19. 
+* Który dział zatrudnia obecnie najwięcej osób?
+
+##Zadanie 20. 
+* Stwórz raport zarobków obecnych managerów od najmniej
+zarabiających do najlepiej zarabiających podając działy w
+których pracują.
+(Nazwa działu, Imię, Nazwisko, Wynagrodzenie)
+
+##Zadanie 21.
+Który dział miał najwięcej managerów?
+
+##Zadanie 22.
+Znajdź najlepiej zarabiającą, obecnie zatrudnioną kobietę.
 
 #PROCEDURY/FUNKCJE
 
