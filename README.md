@@ -170,7 +170,7 @@ Który dział miał najwięcej managerów?
 ## Zadanie 22.
 Znajdź najlepiej zarabiającą, obecnie zatrudnioną kobietę.
 
-#PROCEDURY/FUNKCJE
+# PROCEDURY/FUNKCJE
 
 ## Zadanie 1.
 
@@ -185,7 +185,7 @@ Napisz procedurę usuwającą pracownika z firmy
 ## Zadanie 4.
 Napisz funkcję obliczającą średnią pensję dla danego stanowiska
 
-#TRIGERY
+# TRIGERY
 
 ## Zadanie 1.
 Dodaj tabelę audytową pracowników
@@ -193,7 +193,7 @@ Dodaj tabelę audytową pracowników
 ## Zadanie 2. 
 Napisz trigger, który po usunięciu pracownika wstawi jego dane do tabeli audytowej.
 
-#WIDOKI
+# WIDOKI
 
 ## Zadanie 1. 
 Zapisz w formie widoków i wyświetl dowolne zapytanie wykonane podczas zajęć.
