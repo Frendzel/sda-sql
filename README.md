@@ -1,14 +1,14 @@
 # DOCKER
-By default after deployment MySQL has following connection restrictions:
+Wykonaj poniższą instrukcję, aby zainstalować poprawnie obraz mysql servera w wersji 5.7
+```
+docker pull mysql/mysql-server:5.7
+```
 
-### docker pull mysql/mysql-server:5.7
 ### Start your mysql image with all port mappings required:
-  
 ```
 docker run -p 3306:3306 --name=mysql57 -d mysql/mysql-server:5.7
 ```
 or, if the complete port mapping is required:
-
 ```
 docker run -p 3306:3306 -p 33060:33060 --name=mysql57 -d mysql/mysql-server:5.7
 ```
@@ -43,29 +43,39 @@ port: 3306
 user: root
 pass: root
 
+# Schemat employees
+
+Wywołać poniższe skrypty w następującej kolejności na bazie:
+
+* employees.sql
+* load_departments.dump ;
+* load_employees.dump ;
+* load_dept_emp.dump ;
+* load_dept_manager.dump ;
+* load_titles.dump ;
+* load_salaries1.dump ;
+* load_salaries2.dump ;
+* load_salaries3.dump ;
+
+Jeżeli użyłeśdockera wykorzystaj poniższe polecenia:
+```
+docker exec -i mysql57 mysql -uroot -ppassword < employees.sql
+docker exec -i mysql57 mysql -uroot -ppassword < load_departments.dump
+docker exec -i mysql57 mysql -uroot -ppassword < load_employees.dump
+docker exec -i mysql57 mysql -uroot -ppassword < load_dept_emp.dump
+docker exec -i mysql57 mysql -uroot -ppassword < load_dept_manager.dump
+docker exec -i mysql57 mysql -uroot -ppassword < load_titles.dump
+docker exec -i mysql57 mysql -uroot -ppassword < load_salaries1.dump
+docker exec -i mysql57 mysql -uroot -ppassword < load_salaries2.dump
+docker exec -i mysql57 mysql -uroot -ppassword < load_salaries3.dump
+```
+
+Jeżeli zdecydowałeś się na instalację mysqla za pomocą standardowego instalatora wystarczy uruchomić plik:
+```
+mysql57 mysql -uroot -ppassword < employees-standard.sql
+```
+
 # SQL
-
-# ZADANIA WŁASNY SCHEMAT
-
-##Zadanie 0
-Zaprojektuj własny schemat
-
-##Zadanie 1 (łatwe).
-Zaimplementuj własny schemat w mysqlu (może być przez diagram ERD i forward engineering)
-
-##Zadanie 2 (średnie).
-Zamodeluj relacje przy użyciu instrukcji SQL
-
-##Zadanie 3 (trudne).
-Zastanów się w jaki sposób uzupełnić tabele przykładowymi danymi, jeżeli napotkasz trudności związane ze zbyt dużą liczbą constraintów na tabelach spróbuj uzupełnić je ręcznie niewielką ilością danych
-
-##Zadanie 4 (trudne).
-Twój schemat powinien zawierać co najmniej 
-* 3 różne relacje, 
-* 2 procedury składowane, 
-* 2 funkcje, 
-* 2 triggery
-* 3 różne widoki.
 
 # ZADANIA SCHEMAT EMPLOYEES
 
@@ -160,6 +170,29 @@ Napisz trigger, który po usunięciu pracownika wstawi jego dane do tabeli audyt
 
 ##Zadanie 1. 
 Zapisz w formie widoków i wyświetl dowolne zapytanie wykonane podczas zajęć.
+
+# ZADANIA WŁASNY SCHEMAT
+
+##Zadanie 0
+Zaprojektuj własny schemat
+
+##Zadanie 1 (łatwe).
+Zaimplementuj własny schemat w mysqlu (może być przez diagram ERD i forward engineering)
+
+##Zadanie 2 (średnie).
+Zamodeluj relacje przy użyciu instrukcji SQL
+
+##Zadanie 3 (trudne).
+Zastanów się w jaki sposób uzupełnić tabele przykładowymi danymi, jeżeli napotkasz trudności związane 
+ze zbyt dużą liczbą constraintów na tabelach spróbuj uzupełnić je ręcznie niewielką ilością danych
+
+##Zadanie 4 (trudne).
+Twój schemat powinien zawierać co najmniej 
+* 3 różne relacje, 
+* 2 procedury składowane, 
+* 2 funkcje, 
+* 2 triggery
+* 3 różne widoki.
 
 #Zadania dodatkowe
 https://sqlzoo.net/
