@@ -80,59 +80,116 @@ mysql -uroot -ppassword < employees-standard.sql
 # ZADANIA SCHEMAT EMPLOYEES
 
 ## ZADANIE 1
-* Wyświetl dzisiejszą datę 
+* Wyświetl dzisiejszą datę
+```
+select sysdate();
+```
 * Wyświetl aktualny rok:
+```
+select year(sysdate());
+```
 * Wyświetl aktualny miesiąc:
-* Wyświetl aktualny dzień:
+```
+select month(sysdate());
+```
+* Wyświetl aktualny   dzień:
+```
+select day(sysdate());
+```
 
+Alternatywnie:
+
+``` SELECT curdate(), year(current_date()), month(current_date()), dayofmonth(current_date()); ```
 ## ZADANIE 2
 * Wyszukaj wszystkich pracowników?
+```
+```
 * Wyszukaj wśród pracowników wszystkich mężczyczn.
+```
+```
 * I ogranicz wyniki do 10
+```
+```
 * Znajdź 30 najstarszych pracowników
+```
+```
 * Ile było i jest w firmie zatrudnionych pracowników?
+```
+```
 * Ilu inżynierów ('engineer') pracuje obecnie w firmie (tabela titles)?
+```
+```
 * Policz wszystkich pracujących mężczyzn i kobiety.
+```
+select gender ,count(*) as ‘liczba pracownikow’ from employees 
+group by gender;
+```
 * Policz wszystkich pracujących mężczyzn i kobiety urodzonych po 1960.
-
+```
+select count(*)'Pracowncicy urodzeni po 1960', gender 
+from employees
+where year(birth_date) > 1960
+group by gender;
+```
 ## ZADANIE 3
 * Znajdź największe wynagrodzenie.
+```
+```
 * Znajdź najmniejsze wynagrodzenie.
+```
+```
 * Wyświetl imię i nazwisko pracownika w kolumnie zapisanej jako ‘rekin biznesu’ mężczyzn urodzonych po 1954 roku
-
+```
+```
 ## ZADANIE 4
 * Policz rekinów biznesu i zapisz ich w danej kolumnie
-
+```
+```
 ## ZADANIE 5
 * Policz ile osób pracuje na danym stanowisku
-
+```
+```
 ## ZADANIE 6
 * Policz ile osób pracuje na jakim stanowisku.
-* Policz ile w firmie pracuje kobiet i ile mężczyzn?
+```
+```
 * Policz ile kobiet i ile mężczyzn pracuje na danym stanowisku.
-
+```
+```
+* Na których stanowiskach pracuje więcej niż 100 000 osób? (HAVING)
+```
+```
 ## ZADANIE 7 
 * Wyświetl zarobki, imie i nazwisko pracownika wraz płcią, którzy zarabiają powyżej 150000 w konstrukcjach z JOIN i podzapytaniem z ANY (uwaga na ALL)
-
+```
+```
 ## ZADANIE 8 
 * Wyświetl zarobki, imię i nazwisko pracownika wraz płcią, którzy zarabiają pomiędzy 145000 a 150000
-
+```
+```
 ## ZADANIE 9
 * Wyświetlić mężczyznę i kobietę, którzy zarabiają najwięcej
-
+```
+```
 ## ZADANIE 10 
 * Wyświetlić płeć, liczbę pracowników, średnie wynagrodzenie, sumę wynagrodzenia i maksymalne wynagrodzenie dla danej płci.
-
+```
+```
 ## Zadanie 11. 
 * Dodać 250 pracowników do tabeli pracowników
-
+```
+```
 ## Zadanie 12.
 * Policz ile jest oddziałów
-
+```
+```
 ## Zadanie 13.
 * Wyświetl wszystkie zarobki audytowe pracowników, czyli takie, które już się zakończyły
+```
+```
 * Utworz tabele audytowa i przenies tam dane z tabeli zarobkow.
-
+```
+```
 * 3 instrukcje:
 ** select z tabeli zarobkow
 ** insert do tabeli audytowej
@@ -140,64 +197,82 @@ mysql -uroot -ppassword < employees-standard.sql
 
 ## Zadanie 14.
 * Dokonać operacji zmiany płci
-
+```
+```
 ## Zadanie 15.
 * Dokonać odwrotnej operacji zmiany płci w celu przywrócenia danych pierwotnych
-
+```
+```
 ## Zadanie 16. 
 * Wykorzystaj instrukcję DATEDIFF i TIMEDIFF
-
+```
+```
 ## Zadanie 17. 
 * Wyświetl pogrupowane po zawodzie średnie zarobki pracowników na danych stanowiskach większe niż 5000.
 <podpowiedź -> having>
-* Na których stanowiskach pracuje więcej niż 100000 osób?
-
+```
+```
+* Na których stanowiskach pracuje więcej niż 100 000 osób? (having)
+```
+```
 ## Zadnaie 18.
 * Znajdź wszystkich managerów działu Development.
-
+```
+```
 ## Zadanie 19. 
 * Który dział zatrudnia obecnie najwięcej osób?
-
+```
+```
 ## Zadanie 20. 
 * Stwórz raport zarobków obecnych managerów od najmniej
 zarabiających do najlepiej zarabiających podając działy w
 których pracują.
 (Nazwa działu, Imię, Nazwisko, Wynagrodzenie)
-
+```
+```
 ## Zadanie 21.
 Który dział miał najwięcej managerów?
-
+```
+```
 ## Zadanie 22.
 Znajdź najlepiej zarabiającą, obecnie zatrudnioną kobietę.
-
+```
+```
 # PROCEDURY/FUNKCJE
 
 ## Zadanie 1.
 
 Napisz procedurę dodawania pracowników
-
+```
+```
 ## Zadanie 2.
 Napisz procedurę dającą awans
-
+```
+```
 ## Zadanie 3.
 Napisz procedurę usuwającą pracownika z firmy
-
+```
+```
 ## Zadanie 4.
 Napisz funkcję obliczającą średnią pensję dla danego stanowiska
-
+```
+```
 # TRIGERY
 
 ## Zadanie 1.
 Dodaj tabelę audytową pracowników
-
+```
+```
 ## Zadanie 2. 
 Napisz trigger, który po usunięciu pracownika wstawi jego dane do tabeli audytowej.
-
+```
+```
 # WIDOKI
 
 ## Zadanie 1. 
 Zapisz w formie widoków i wyświetl dowolne zapytanie wykonane podczas zajęć.
-
+```
+```
 # ZADANIA WŁASNY SCHEMAT
 
 ## Zadanie 0
