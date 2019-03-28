@@ -79,7 +79,7 @@ mysql -uroot -ppassword < employees-standard.sql
 
 # ZADANIA SCHEMAT EMPLOYEES
 
-## ZADANIE 1
+## ZESTAW 1
 * Wyświetl dzisiejszą datę
 ```
 select sysdate();
@@ -100,7 +100,7 @@ select day(sysdate());
 Alternatywnie:
 
 ``` SELECT curdate(), year(current_date()), month(current_date()), dayofmonth(current_date()); ```
-## ZADANIE 2
+## ZESTAW 2
 * Wyszukaj wszystkich pracowników?
 ```
 select * from employees;
@@ -137,7 +137,7 @@ from employees
 where year(birth_date) > 1960
 group by gender;
 ```
-## ZADANIE 3
+## ZESTAW 3
 * Znajdź największe wynagrodzenie.
 ```
 ```
@@ -147,15 +147,15 @@ group by gender;
 * Wyświetl imię i nazwisko pracownika w kolumnie zapisanej jako ‘rekin biznesu’ mężczyzn urodzonych po 1954 roku
 ```
 ```
-## ZADANIE 4
+## ZESTAW 4
 * Policz rekinów biznesu i zapisz ich w danej kolumnie
 ```
 ```
-## ZADANIE 5
+## ZESTAW 5
 * Policz ile osób pracuje na danym stanowisku
 ```
 ```
-## ZADANIE 6
+## ZESTAW 6
 * Policz ile osób pracuje na jakim stanowisku.
 ```
 ```
@@ -165,31 +165,31 @@ group by gender;
 * Na których stanowiskach pracuje więcej niż 100 000 osób? (HAVING)
 ```
 ```
-## ZADANIE 7 
+## ZESTAW 7 
 * Wyświetl zarobki, imie i nazwisko pracownika wraz płcią, którzy zarabiają powyżej 150000 w konstrukcjach z JOIN i podzapytaniem z ANY (uwaga na ALL)
 ```
 ```
-## ZADANIE 8 
+## ZESTAW 8 
 * Wyświetl zarobki, imię i nazwisko pracownika wraz płcią, którzy zarabiają pomiędzy 145000 a 150000
 ```
 ```
-## ZADANIE 9
+## ZESTAW 9
 * Wyświetlić mężczyznę i kobietę, którzy zarabiają najwięcej
 ```
 ```
-## ZADANIE 10 
+## ZESTAW 10 
 * Wyświetlić płeć, liczbę pracowników, średnie wynagrodzenie, sumę wynagrodzenia i maksymalne wynagrodzenie dla danej płci.
 ```
 ```
-## Zadanie 11. 
+## ZESTAW 11. 
 * Dodać 250 pracowników do tabeli pracowników
 ```
 ```
-## Zadanie 12.
+## ZESTAW 12.
 * Policz ile jest oddziałów
 ```
 ```
-## Zadanie 13.
+## ZESTAW 13.
 * Wyświetl wszystkie zarobki audytowe pracowników, czyli takie, które już się zakończyły
 ```
 ```
@@ -201,19 +201,19 @@ group by gender;
 ** insert do tabeli audytowej
 ** delete z tabeli zarobkow
 
-## Zadanie 14.
+## ZESTAW 14.
 * Dokonać operacji zmiany płci
 ```
 ```
-## Zadanie 15.
+## ZESTAW 15.
 * Dokonać odwrotnej operacji zmiany płci w celu przywrócenia danych pierwotnych
 ```
 ```
-## Zadanie 16. 
+## ZESTAW 16. 
 * Wykorzystaj instrukcję DATEDIFF i TIMEDIFF
 ```
 ```
-## Zadanie 17. 
+## ZESTAW 17. 
 * Wyświetl pogrupowane po zawodzie średnie zarobki pracowników na danych stanowiskach większe niż 5000.
 <podpowiedź -> having>
 ```
@@ -225,76 +225,76 @@ group by gender;
 * Znajdź wszystkich managerów działu Development.
 ```
 ```
-## Zadanie 19. 
+## ZESTAW 19. 
 * Który dział zatrudnia obecnie najwięcej osób?
 ```
 ```
-## Zadanie 20. 
+## ZESTAW 20. 
 * Stwórz raport zarobków obecnych managerów od najmniej
 zarabiających do najlepiej zarabiających podając działy w
 których pracują.
 (Nazwa działu, Imię, Nazwisko, Wynagrodzenie)
 ```
 ```
-## Zadanie 21.
+## ZESTAW 21.
 Który dział miał najwięcej managerów?
 ```
 ```
-## Zadanie 22.
+## ZESTAW 22.
 Znajdź najlepiej zarabiającą, obecnie zatrudnioną kobietę.
 ```
 ```
 # PROCEDURY/FUNKCJE
 
-## Zadanie 1.
+## ZESTAW 1.
 
 Napisz procedurę dodawania pracowników
 ```
 ```
-## Zadanie 2.
+## ZESTAW 2.
 Napisz procedurę dającą awans
 ```
 ```
-## Zadanie 3.
+## ZESTAW 3.
 Napisz procedurę usuwającą pracownika z firmy
 ```
 ```
-## Zadanie 4.
+## ZESTAW 4.
 Napisz funkcję obliczającą średnią pensję dla danego stanowiska
 ```
 ```
 # TRIGERY
 
-## Zadanie 1.
+## ZESTAW 1.
 Dodaj tabelę audytową pracowników
 ```
 ```
-## Zadanie 2. 
+## ZESTAW 2. 
 Napisz trigger, który po usunięciu pracownika wstawi jego dane do tabeli audytowej.
 ```
 ```
 # WIDOKI
 
-## Zadanie 1. 
+## ZESTAW 1. 
 Zapisz w formie widoków i wyświetl dowolne zapytanie wykonane podczas zajęć.
 ```
 ```
 # ZADANIA WŁASNY SCHEMAT
 
-## Zadanie 0
+## ZESTAW 0
 Zaprojektuj własny schemat
 
-## Zadanie 1 (łatwe).
+## ZESTAW 1 (łatwe).
 Zaimplementuj własny schemat w mysqlu (może być przez diagram ERD i forward engineering)
 
-## Zadanie 2 (średnie).
+## ZESTAW 2 (średnie).
 Zamodeluj relacje przy użyciu instrukcji SQL
 
-## Zadanie 3 (trudne).
+## ZESTAW 3 (trudne).
 Zastanów się w jaki sposób uzupełnić tabele przykładowymi danymi, jeżeli napotkasz trudności związane 
 ze zbyt dużą liczbą constraintów na tabelach spróbuj uzupełnić je ręcznie niewielką ilością danych
 
-## Zadanie 4 (trudne).
+## ZESTAW 4 (trudne).
 Twój schemat powinien zawierać co najmniej 
 * 3 różne relacje, 
 * 2 procedury składowane, 
