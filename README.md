@@ -103,21 +103,27 @@ Alternatywnie:
 ## ZADANIE 2
 * Wyszukaj wszystkich pracowników?
 ```
+select * from employees;
 ```
 * Wyszukaj wśród pracowników wszystkich mężczyczn.
 ```
+select * from employees where gender = 'M';
 ```
 * I ogranicz wyniki do 10
 ```
+select * from employees where gender = 'M' limit 10;
 ```
 * Znajdź 30 najstarszych pracowników
 ```
+select * from employees order by birth_date limit 30;
 ```
 * Ile było i jest w firmie zatrudnionych pracowników?
 ```
+select * FROM employees.dept_emp;
 ```
 * Ilu inżynierów ('engineer') pracuje obecnie w firmie (tabela titles)?
 ```
+select count(*) from employees e join titles t on e.emp_no = t.emp_no where title = 'Engineer'
 ```
 * Policz wszystkich pracujących mężczyzn i kobiety.
 ```
