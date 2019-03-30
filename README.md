@@ -43,6 +43,9 @@ port: 3306
 user: root
 pass: root
 
+Be aware that sometimes host address which needs to be changed to:
+127.0.0.1, 192.168.99.100, localhost.
+
 # Schemat employees
 
 Wywołać poniższe skrypty w następującej kolejności na bazie:
@@ -59,15 +62,15 @@ Wywołać poniższe skrypty w następującej kolejności na bazie:
 
 Jeżeli użyłeśdockera wykorzystaj poniższe polecenia:
 ```
-docker exec -i mysql57 mysql -uroot -ppassword < employees.sql
-docker exec -i mysql57 mysql -uroot -ppassword < load_departments.dump
-docker exec -i mysql57 mysql -uroot -ppassword < load_employees.dump
-docker exec -i mysql57 mysql -uroot -ppassword < load_dept_emp.dump
-docker exec -i mysql57 mysql -uroot -ppassword < load_dept_manager.dump
-docker exec -i mysql57 mysql -uroot -ppassword < load_titles.dump
-docker exec -i mysql57 mysql -uroot -ppassword < load_salaries1.dump
-docker exec -i mysql57 mysql -uroot -ppassword < load_salaries2.dump
-docker exec -i mysql57 mysql -uroot -ppassword < load_salaries3.dump
+docker exec -i mysql57 mysql -uroot -proot < employees.sql
+docker exec -i mysql57 mysql -uroot -proot < load_departments.dump
+docker exec -i mysql57 mysql -uroot -proot < load_employees.dump
+docker exec -i mysql57 mysql -uroot -proot < load_dept_emp.dump
+docker exec -i mysql57 mysql -uroot -proot < load_dept_manager.dump
+docker exec -i mysql57 mysql -uroot -proot < load_titles.dump
+docker exec -i mysql57 mysql -uroot -proot < load_salaries1.dump
+docker exec -i mysql57 mysql -uroot -proot < load_salaries2.dump
+docker exec -i mysql57 mysql -uroot -proot < load_salaries3.dump
 ```
 
 Jeżeli zdecydowałeś się na instalację mysqla za pomocą standardowego instalatora wystarczy uruchomić plik:
@@ -127,7 +130,7 @@ select count(*) from employees e join titles t on e.emp_no = t.emp_no where titl
 ```
 * Policz wszystkich pracujących mężczyzn i kobiety.
 ```
-select gender ,count(*) as ‘liczba pracownikow’ from employees 
+select gender ,count(*) as 'liczba pracownikow' from employees 
 group by gender;
 ```
 * Policz wszystkich pracujących mężczyzn i kobiety urodzonych po 1960.
@@ -156,17 +159,20 @@ group by gender;
 ```
 ```
 ## ZESTAW 6
-* Policz ile osób pracuje na jakim stanowisku.
+* Policz ile osób pracuje na danym stanowisku, gdzie min zatrudnienia to 1000 osob
 ```
 ```
 * Policz ile kobiet i ile mężczyzn pracuje na danym stanowisku.
+```
+```
+* Policz ile kobiet i ile mężczyzn pracuje na danym stanowisku gdzie max zatrudnienia to 100 osob
 ```
 ```
 * Na których stanowiskach pracuje więcej niż 100 000 osób? (HAVING)
 ```
 ```
 ## ZESTAW 7 
-* Wyświetl zarobki, imie i nazwisko pracownika wraz płcią, którzy zarabiają powyżej 150000 w konstrukcjach z JOIN i podzapytaniem z ANY (uwaga na ALL)
+* Wyświetl zarobki, imie i nazwisko pracownika wraz płcią w formie jednej kolumny, którzy zarabiają powyżej 150000 w konstrukcjach z JOIN i podzapytaniem z ANY (uwaga na ALL)
 ```
 ```
 ## ZESTAW 8 
@@ -189,7 +195,7 @@ group by gender;
 * Policz ile jest oddziałów
 ```
 ```
-## ZESTAW 13.
+## ZESTAW 13.***
 * Wyświetl wszystkie zarobki audytowe pracowników, czyli takie, które już się zakończyły
 ```
 ```
