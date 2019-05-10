@@ -106,39 +106,27 @@ Alternatywnie:
 ## ZESTAW 2
 * Wyszukaj wszystkich pracowników?
 ```
-select * from employees;
 ```
 * Wyszukaj wśród pracowników wszystkich mężczyczn.
 ```
-select * from employees where gender = 'M';
 ```
 * I ogranicz wyniki do 10
 ```
-select * from employees where gender = 'M' limit 10;
 ```
 * Znajdź 30 najstarszych pracowników
 ```
-select * from employees order by birth_date limit 30;
 ```
 * Ile było i jest w firmie zatrudnionych pracowników?
 ```
-select * FROM employees.dept_emp;
 ```
 * Ilu inżynierów ('engineer') pracuje obecnie w firmie (tabela titles)?
 ```
-select count(*) from employees e join titles t on e.emp_no = t.emp_no where title = 'Engineer'
 ```
 * Policz wszystkich pracujących mężczyzn i kobiety.
 ```
-select gender ,count(*) as 'liczba pracownikow' from employees 
-group by gender;
 ```
 * Policz wszystkich pracujących mężczyzn i kobiety urodzonych po 1960.
 ```
-select count(*)'Pracowncicy urodzeni po 1960', gender 
-from employees
-where year(birth_date) > 1960
-group by gender;
 ```
 ## ZESTAW 3
 * Znajdź największe wynagrodzenie.
