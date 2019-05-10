@@ -46,9 +46,9 @@ pass: root
 Be aware that sometimes host address which needs to be changed to:
 127.0.0.1, 192.168.99.100, localhost.
 
-# Schemat employees
+# Schema employees
 
-Wywołać poniższe skrypty w następującej kolejności na bazie:
+Run below scripts in given order!
 
 * employees.sql
 * load_departments.dump ;
@@ -60,7 +60,7 @@ Wywołać poniższe skrypty w następującej kolejności na bazie:
 * load_salaries2.dump ;
 * load_salaries3.dump ;
 
-Jeżeli użyłeśdockera wykorzystaj poniższe polecenia:
+If you've deciced to use docker run these ones:
 ```
 docker exec -i mysql57 mysql -uroot -proot < employees.sql
 docker exec -i mysql57 mysql -uroot -proot < load_departments.dump
@@ -73,12 +73,12 @@ docker exec -i mysql57 mysql -uroot -proot < load_salaries2.dump
 docker exec -i mysql57 mysql -uroot -proot < load_salaries3.dump
 ```
 
-Jeżeli zdecydowałeś się na instalację mysqla za pomocą standardowego instalatora wystarczy uruchomić plik:
+If you've just installed the mysql please use below instruction:
 ```
 mysql -uroot -ppassword < employees-standard.sql
 ```
 
-# SQL
+# SQL (Ok, let's switch to polish to get better understanding here)
 
 # ZADANIA SCHEMAT EMPLOYEES
 
